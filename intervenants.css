@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* debut header */
+.header-container {
+    background-color: #4e342e;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Assure le wrapping pour petits écrans */
+  }
+  
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex: 1;
+    margin-left: 40px;
+    justify-content: flex-end;
+    /* Aligne le menu à droite par défaut */
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+    margin: 0 100px;
+  
+  }
+  
+  
+  
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    /* Positionne le burger en haut à droite */
+    top: 20px;
+    right: 20px;
+  }
+  
+  .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s;
+  }
+  
+  .burger-checkbox {
+    display: none;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 932px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .burger-menu {
+      display: flex;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 0;
+    }
+  
+    .nav-menu a {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      text-align: left;
+      /* Aligne le texte à gauche */
+    }
+  
+    .burger-checkbox:checked ~ .nav-menu {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 429px) {
+    .logo img {
+      max-width: 80px;
+    }
+  
+    .header-container {
+      padding: 15px;
+    }
+  
+    .nav-menu a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  /* fin header */
+
+
+main {
+ h1{
+
+  font-size: 80px;
+  text-align: center;
+  margin: 100px;
+  font-weight: bold;
+
+  
+ }
+ /* Media Queries pour le titre "Portraits des intervenants" */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Taille réduite pour les tablettes */
+    margin: 30px 20px; /* Réduction des marges */
+    text-align: center; /* Centrage du texte */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Taille encore plus petite pour les mobiles */
+    margin: 20px 10px; /* Marges compactes pour petits écrans */
+    text-align: center; /* Toujours centré */
+  }
+}
+
+
+.portraits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10em;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.portrait {
+    background: #FFF8E1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 1em;
+    width: 700px;
+    
+}
+.portrait img {
+  width: 150px;
+  height: 200px;
+  justify-content: space-between;
+ 
+
+
+}
+.resette{
+display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.jour{
+  font-weight: bold;
+  padding: 20px;
+
+}
+h2{
+  margin-top: 20px;
+}
+
+
+/* responssive */
+
+@media (max-width: 768px) {
+  .portrait {
+    width: 100%; /* Les cartes occupent toute la largeur */
+    max-width: 90%; /* Une petite marge intérieure */
+    padding: 10px;
+  }
+
+  .portrait img {
+    max-width: 120px; /* Réduit la taille des images */
+    height: auto;
+  }
+
+  .resette {
+    gap: 10px; /* Réduit l'espacement entre les miniatures */
+    justify-content: center; /* Centre les miniatures */
+  }
+
+  .resette img {
+    width: 70px; /* Miniatures plus petites */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .portrait {
+    width: 100%; /* Les cartes s'étendent totalement */
+    padding: 10px;
+  }
+
+  .portrait img {
+    max-width: 100px; /* Images encore plus petites pour les très petits écrans */
+    height: auto;
+  }
+
+  .resette {
+    gap: 5px; /* Espacement minimal entre miniatures */
+  }
+
+  .resette img {
+    width: 50px; /* Miniatures encore plus réduites */
+    height: auto;
+  }
+}
+
+
+}
+
+
+
+/* debut footer */
+.footer-container {
+    background-color: #4e342e;
+    color: white;
+    flex-wrap: wrap;
+    /* Permet de s'adapter aux petits écrans */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-container {
+    background-color: #4e342e;
+    color: white;
+    padding: 20px 50px;
+    /* Ajoute un espace intérieur (padding) */
+    display: flex;
+    justify-content: space-between;
+    /* Espace entre les sections */
+    align-items: center;
+    /* Aligne verticalement */
+    gap: 30px;
+    /* Ajoute un espace entre les éléments principaux */
+  }
+  
+  .footer-menu {
+    display: flex;
+    gap: 40px;
+    flex: 2;
+    /* les icônes au bout */
+  }
+  
+  .footer-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    /* Espace entre chaque lien */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .img {
+    display: flex;
+    gap: 100px;
+    /* Espace entre les icônes */
+    justify-content: center;
+    /* Aligne les icônes au centre */
+    flex: 0.5;
+    /* Réduit l'espace occupé par les icônes */
+  }
+  
+  .img img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .img img:hover {
+    transform: scale(1.1);
+    /* Animation d'agrandissement au survol */
+  }
+  
+  /* Responsive */
+  @media (max-width: 932px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .footer-menu {
+      justify-content: center;
+      flex: 1;
+    }
+  
+    .footer-menu ul {
+      flex-direction: column;
+      gap: 85px;
+    }
+  
+    .img {
+      justify-content: center;
+      /* Centre les icônes  insta facebokk */
+      flex: 1;
+      margin-bottom: 50px;
+      flex-direction: column;
+    }
+  }
+  
+  /* fin footer */
+  
+
