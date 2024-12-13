@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,193 +7,125 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Fond beige */
 }
-
 
 /* debut header */
 .header-container {
-    background-color: #4e342e;
-    padding: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* Assure le wrapping pour petits écrans */
-  }
-  
-  .logo img {
-    max-width: 100px;
-    height: auto;
-  }
-  
-  .nav-menu {
-    display: flex;
-    flex: 1;
-    margin-left: 40px;
-    justify-content: flex-end;
-    /* Aligne le menu à droite par défaut */
-  }
-  
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, text-decoration 0.3s;
-    margin: 0 100px;
-  
-  }
-  
-  
-  
-  .nav-menu a:hover {
-    text-decoration: underline;
-  }
-  
-  .burger-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    /* Positionne le burger en haut à droite */
-    top: 20px;
-    right: 20px;
-  }
-  
-  .burger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: transform 0.3s;
-  }
-  
-  .burger-checkbox {
-    display: none;
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 932px) {
-    .header-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .burger-menu {
-      display: flex;
-    }
-  
-    .nav-menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .nav-menu ul {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      padding: 0;
-    }
-  
-    .nav-menu a {
-      padding: 10px;
-      font-size: 16px;
-      width: 100%;
-      text-align: left;
-      /* Aligne le texte à gauche */
-    }
-  
-    .burger-checkbox:checked ~ .nav-menu {
-      display: flex;
-    }
-  }
-  
-  @media (max-width: 429px) {
-    .logo img {
-      max-width: 80px;
-    }
-  
-    .header-container {
-      padding: 15px;
-    }
-  
-    .nav-menu a {
-      font-size: 14px;
-      padding: 8px;
-    }
-  }
-  
-  /* fin header */
+  background-color: #4e342e;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Assure le wrapping pour petits écrans */
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  flex: 1;
+  margin-left: 40px;
+  justify-content: flex-end;
+  /* Aligne le menu à droite par défaut */
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-decoration 0.3s;
+  margin: 0 100px;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  /* Positionne le burger en haut à droite */
+  top: 20px;
+  right: 20px;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.burger-checkbox {
+  display: none;
+}
+
+/* fin header */
 
 /* 
 main */
 
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F5F5F5; /* Fond beige */
-}
-
 h1 {
   text-align: center;
-  color: #4E342E; /* Marron foncé */
+  color: #4e342e; /* Marron foncé */
+  margin: 30px 0;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 30px;
-  background-color: #BCAAA4; /* Marron clair */
-}
-
-th, td {
-  border: 1px solid #4E342E; /* Bordures marron foncé */
+th,
+td {
+  border: 1px solid #4e342e; /* Bordures marron foncé */
   padding: 10px;
   text-align: left;
 }
 
 th {
-  background-color: #4E342E; /* En-tête marron foncé */
+  background-color: #4e342e; /* En-tête marron foncé */
   color: white; /* Texte blanc */
 }
 
 tr:nth-child(even) {
-  background-color: #F5F5F5; /* Crème pour les lignes paires */
+  background-color: #f5f5f5; /* Crème pour les lignes paires */
 }
 
 tr:nth-child(odd) {
-  background-color: #FFF; /* Blanc pour les lignes impaires */
+  background-color: #fff; /* Blanc pour les lignes impaires */
 }
 
 /* Responsiveness */
 /* Ajoutez une boîte de défilement horizontale si le tableau déborde */
 table {
-  width: 100%;
+  width: 81%;
   border-collapse: collapse;
   margin: 20px 30px;
-  background-color: #BCAAA4; /* Marron clair */
+  background-color: #bcaaa4; /* Marron clair */
   overflow-x: auto; /* Permet le défilement horizontal */
   display: block; /* Nécessaire pour activer le défilement */
 }
 
-th, td {
-  border: 1px solid #4E342E; /* Bordures marron foncé */
+th,
+td {
+  border: 1px solid #4e342e; /* Bordures marron foncé */
   padding: 10px;
   text-align: left;
   word-wrap: break-word; /* Le texte se divise sur plusieurs lignes */
 }
 
-img {
+table img {
   max-width: 100%; /* Ajuste automatiquement les images */
   height: auto;
 }
@@ -204,7 +136,8 @@ img {
     font-size: 14px; /* Réduction de la taille des caractères */
   }
 
-  th, td {
+  th,
+  td {
     padding: 8px; /* Réduction de l'espacement */
   }
 
@@ -213,135 +146,156 @@ img {
   }
 }
 
-@media (max-width: 480px) {
-  table {
-    font-size: 12px; /* Texte plus petit pour les mobiles */
-  }
+/* debut footer */
+.footer-container {
+  background-color: #4e342e;
+  color: white;
+  flex-wrap: wrap;
+  /* Permet de s'adapter aux petits écrans */
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  th, td {
-    padding: 5px; /* Espacement encore réduit */
-  }
+.footer-container {
+  background-color: #4e342e;
+  color: white;
+  padding: 20px 50px;
+  /* Ajoute un espace intérieur (padding) */
+  display: flex;
+  justify-content: space-between;
+  /* Espace entre les sections */
+  align-items: center;
+  /* Aligne verticalement */
+  gap: 30px;
+  /* Ajoute un espace entre les éléments principaux */
+}
 
-  h1 {
-    font-size: 18px;
-    margin: 10px 0; /* Moins de marge autour du titre */
-  }
+.footer-menu {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+  /* les icônes au bout */
+}
 
-  img {
-    max-width: 80px; /* Images encore plus petites sur mobiles */
-  }
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+  /* Espace entre chaque lien */
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.img {
+  display: flex;
+  gap: 100px;
+  /* Espace entre les icônes */
+  justify-content: center;
+  /* Aligne les icônes au centre */
+  flex: 0.5;
+  /* Réduit l'espace occupé par les icônes */
+}
+
+.img img {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.img img:hover {
+  transform: scale(1.1);
+  /* Animation d'agrandissement au survol */
 }
 
 
-/* main */
-
-
-
-
-
-
-
-  /* debut footer */
-.footer-container {
-    background-color: #4e342e;
-    color: white;
-    flex-wrap: wrap;
-    /* Permet de s'adapter aux petits écrans */
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* fin footer */
+/* Responsiveness */
+@media (max-width: 932px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .footer-container {
-    background-color: #4e342e;
-    color: white;
-    padding: 20px 50px;
-    /* Ajoute un espace intérieur (padding) */
+
+  .burger-menu {
     display: flex;
-    justify-content: space-between;
-    /* Espace entre les sections */
-    align-items: center;
-    /* Aligne verticalement */
-    gap: 30px;
-    /* Ajoute un espace entre les éléments principaux */
   }
-  
-  .footer-menu {
-    display: flex;
-    gap: 40px;
-    flex: 2;
-    /* les icônes au bout */
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
   }
-  
-  .footer-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 70px;
-    /* Espace entre chaque lien */
-    margin: 0;
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
     padding: 0;
   }
-  
-  .footer-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+
+  .nav-menu a {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    /* Aligne le texte à gauche */
   }
-  
-  .footer-menu a:hover {
-    text-decoration: underline;
-  }
-  
-  .img {
+
+  .burger-checkbox:checked ~ .nav-menu {
     display: flex;
-    gap: 100px;
-    /* Espace entre les icônes */
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer-menu {
     justify-content: center;
-    /* Aligne les icônes au centre */
-    flex: 0.5;
-    /* Réduit l'espace occupé par les icônes */
+    flex: 1;
   }
-  
-  .img img {
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    transition: transform 0.3s;
+
+  .footer-menu ul {
+    flex-direction: column;
+    gap: 85px;
   }
-  
-  .img img:hover {
-    transform: scale(1.1);
-    /* Animation d'agrandissement au survol */
+
+  .img {
+    justify-content: center;
+    /* Centre les icônes  insta facebokk */
+    flex: 1;
+    margin-bottom: 50px;
+    flex-direction: column;
   }
-  
-  /* Responsive */
-  @media (max-width: 932px) {
-    .footer-container {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-      padding: 20px;
-    }
-  
-    .footer-menu {
-      justify-content: center;
-      flex: 1;
-    }
-  
-    .footer-menu ul {
-      flex-direction: column;
-      gap: 85px;
-    }
-  
-    .img {
-      justify-content: center;
-      /* Centre les icônes  insta facebokk */
-      flex: 1;
-      margin-bottom: 50px;
-      flex-direction: column;
-    }
+}
+
+@media (max-width: 429px) {
+  .logo img {
+    max-width: 80px;
   }
-  
-  /* fin footer */
-  
+
+  .header-container {
+    padding: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
